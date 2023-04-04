@@ -14,10 +14,39 @@ const SectionSix = () => {
         <div className="h-1 w-20 bg-pink-500"></div>
       </div>
       <div className="flex gap-10 py-10">
-        <div className="flex-1 border">
-          <Image src={"/product.webp"} alt="product" width={400} height={400} />
+        <div className="w-1/2">
+          <Image
+            src={"/product.webp"}
+            alt="product"
+            width={700}
+            height={700}
+            className="border"
+          />
+          <div className="flex items-center justify-between gap-1 pt-2">
+            <Image
+              src={"/product.webp"}
+              alt="product"
+              width={150}
+              height={150}
+              className="border"
+            />
+            <Image
+              src={"/product.webp"}
+              alt="product"
+              width={150}
+              height={150}
+              className="border"
+            />
+            <Image
+              src={"/product.webp"}
+              alt="product"
+              width={150}
+              height={150}
+              className="border"
+            />
+          </div>
         </div>
-        <div className="flex-1">
+        <div className="flex w-1/2 flex-col gap-4">
           <h1 className="text-2xl capitalize">base foundation</h1>
           <div className="flex items-center gap-2">
             <div className="flex gap-1 text-sm text-yellow-400">
@@ -46,7 +75,7 @@ const SectionSix = () => {
               <p className="font-bold">sku:</p> <p>fabulous-ishi</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 text-pink-600">
+          <div className="flex items-center gap-10 text-pink-600">
             <div className="flex items-center gap-3 capitalize">
               <BsHeart />
               <p>add to wishlist</p>
@@ -69,7 +98,7 @@ const SectionSix = () => {
             <div className="h-3 w-72 rounded-full bg-pink-100">
               <div className="h-3 w-32 rounded-full bg-pink-800"></div>
             </div>
-            <div>
+            <div className="pt-5">
               <p className="text-lg font-bold text-pink-400">size</p>
               <div className="flex items-center gap-3 uppercase">
                 <div className="flex h-10 w-10 items-center justify-center border bg-black text-white">
@@ -83,25 +112,76 @@ const SectionSix = () => {
                 </div>
               </div>
             </div>
-            <div>
-              <p>color</p>
-              <div>s</div>
-              <div>m</div>
-              <div>l</div>
-            </div>
-            <div>
-              <p>quantity</p>
-              <div>
-                <div>-</div>
-                <div>1</div>
-                <div>+</div>
+            <div className="pt-5">
+              <p className="text-lg font-bold text-pink-400">color</p>
+              <div className="flex items-center gap-3 uppercase">
+                <div className="flex h-10 w-10 border bg-black"></div>
+                <div className="flex h-10 w-10 border bg-yellow-500"></div>
+                <div className="flex h-10 w-10 border bg-red-500"></div>
               </div>
-              <div>
-                <button>add to cart</button>
-                <button>buy it now</button>
+            </div>
+            <div className="pt-5">
+              <p className="pb-2 text-lg font-bold text-pink-400">quantity</p>
+              <div className="flex items-center uppercase">
+                <div className="flex flex h-10 w-10 items-center justify-center border">
+                  -
+                </div>
+                <div className="flex flex h-10 w-10 items-center justify-center border">
+                  1
+                </div>
+                <div className="flex flex h-10 w-10 items-center justify-center border">
+                  +
+                </div>
+              </div>
+              <div className="flex gap-5 py-5">
+                <button className="rounded-full bg-pink-500 px-10 py-2 uppercase text-white">
+                  add to cart
+                </button>
+                <button className="rounded-full bg-black px-10 py-2 uppercase text-white">
+                  buy it now
+                </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="w-full">
+        <div className="relative mx-auto w-[1116px] border p-10 pt-20">
+          <div className="absolute left-1/2 top-0 cursor-pointer bg-pink-100 px-5 py-2 uppercase duration-500 hover:bg-black hover:text-white">
+            description
+          </div>
+          <p className="pb-10 text-pink-600">
+            Faded short sleeves t-shirt with high neckline. Soft and stretchy
+            material for a comfortable fit. Accessorize with a straw hat and you
+            are ready for summer!
+          </p>
+          <h1 className="pb-2 font-bold capitalize">Sample Unordered List</h1>
+          <ul className="list-disc pl-8 text-pink-800">
+            <li>Comodous in tempor ullamcorper miaculis</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Lorem, ipsum.</li>
+          </ul>
+          <h1 className="pb-2 pt-2 font-bold capitalize">
+            Sample ordered List
+          </h1>
+          <ol className="list-decimal pl-8 text-pink-800">
+            <li>Comodous in tempor ullamcorper miaculis</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Lorem, ipsum.</li>
+          </ol>
+          <h1 className="pb-2 pt-2 font-bold capitalize">
+            Sample Paragraph Text
+          </h1>
+          <p className="border-l pl-10 text-pink-800">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            voluptatum fuga optio, officia repudiandae excepturi explicabo! Vel
+            cum obcaecati ad nulla eum asperiores tempora in odio quos sapiente
+            consequuntur suscipit voluptatum dolorem, reprehenderit soluta
+            voluptatem illum minus quod voluptates rem fugiat quasi facilis?
+            Nemo ea, quos recusandae ut eos facere.
+          </p>
         </div>
       </div>
     </section>
