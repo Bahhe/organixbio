@@ -6,10 +6,12 @@ import SectionFour from "~/components/SectionFour";
 import SectionThree from "~/components/SectionThree";
 import SectionTwo from "~/components/SectionTwo";
 import { Poppins } from "next/font/google";
+import SectionFive from "~/components/SectionFive";
+import SectionSix from "~/components/SectionSix";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100","200","300","400","500","600","700","800","900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const Home: NextPage = () => {
@@ -26,6 +28,8 @@ const Home: NextPage = () => {
         <SectionTwo />
         <SectionThree />
         <SectionFour />
+        <SectionFive />
+        <SectionSix />
       </main>
     </>
   );

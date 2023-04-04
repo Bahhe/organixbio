@@ -11,14 +11,14 @@ const Product = () => {
       <div className=" flex h-[calc(100vh-110px)] w-screen items-center bg-pink-100">
         <div className="flex flex-1 items-center justify-center">
           <div className="">
-            <span className="text-4xl font-thin text-pink-300">Cosmetics</span>
+            <span className="text-4xl text-pink-300">Cosmetics</span>
             <h1 className="py-5 text-7xl font-extrabold">Super Natural</h1>
-            <p className="w-96 text-gray-500 font-thin">
+            <p className="w-96 text-sm text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus dolore, dolor soluta eius praesentium alias. Accusamus
               alias natus vero quasi?
             </p>
-            <button className="text-bold mt-5 rounded-full bg-pink-400 px-6 py-3 text-sm font-thin uppercase text-white drop-shadow">
+            <button className="text-bold mt-5 rounded-full bg-pink-400 px-6 py-3 text-sm uppercase text-white drop-shadow">
               shop now
             </button>
           </div>
