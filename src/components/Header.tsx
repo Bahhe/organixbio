@@ -4,7 +4,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 const SubHeader = () => {
   return (
-    <div className="fixed top-16 flex h-10 w-screen items-center justify-center py-2">
+    <div className="fixed top-16 flex h-10 w-screen items-center justify-center py-2 backdrop-blur-lg z-10">
       <nav>
         <ul className="flex items-center gap-8 text-gray-700">
           <li>Products</li>
@@ -20,7 +20,7 @@ const SubHeader = () => {
 const Header = () => {
   return (
     <>
-      <header className="fixed flex h-16 w-screen items-center justify-evenly border-b py-7">
+      <header className="fixed flex h-16 w-screen items-center justify-evenly border-b py-7 backdrop-blur-lg z-10">
         <nav>
           <ul className="flex items-center gap-3 text-sm">
             <li className="border-r pr-5">Contact</li>

@@ -12,8 +12,8 @@ const Product = () => {
         <div className="flex flex-1 items-center justify-center">
           <div className="">
             <span className="text-4xl font-thin text-pink-300">Cosmetics</span>
-            <h1 className="py-5 text-7xl font-bold">Super Natural</h1>
-            <p className="w-96 text-gray-500">
+            <h1 className="py-5 text-7xl font-extrabold">Super Natural</h1>
+            <p className="w-96 text-gray-500 font-thin">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus dolore, dolor soluta eius praesentium alias. Accusamus
               alias natus vero quasi?
@@ -50,7 +50,7 @@ const Hero = () => {
           <Product />
         </SwiperSlide>
       </Swiper>
-      <MdArrowBackIos className="image-swiper-button-prev absolute left-5 z-10 cursor-pointer text-5xl opacity-0  duration-700 hover:scale-105 group-hover:opacity-100" />
+      <MdArrowBackIos className="image-swiper-button-prev absolute left-5 z-10 cursor-pointer text-5xl opacity-0 duration-700 hover:scale-105 group-hover:opacity-100" />
       <MdArrowForwardIos className="image-swiper-button-next absolute right-5 z-10 cursor-pointer text-5xl opacity-0 duration-700 hover:scale-105 group-hover:opacity-100" />
     </div>
   );
