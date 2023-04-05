@@ -7,10 +7,10 @@ const SubHeader = () => {
     <div className="absolute top-16 z-10 flex h-10 w-screen items-center justify-center py-2 backdrop-blur-lg">
       <nav>
         <ul className="flex items-center gap-8 text-gray-700">
-          <li>Products</li>
-          <li>Facebook</li>
-          <li>TikTok</li>
-          <li>About us</li>
+          <li className="cursor-pointer">Products</li>
+          <li className="cursor-pointer">Facebook</li>
+          <li className="cursor-pointer">TikTok</li>
+          <li className="cursor-pointer">About us</li>
         </ul>
       </nav>
     </div>
