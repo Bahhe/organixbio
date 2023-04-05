@@ -18,7 +18,7 @@ const SectionSeven = () => {
             width={120}
             height={120}
             alt="person"
-            className="absolute left-10 top-0 -translate-y-1/2 rounded-full border border-4 border-pink-500 bg-white"
+            className="absolute left-10 top-0 -translate-y-1/2 rounded-full border-4 border-pink-500 bg-white"
           />
           <p className="w-[500px] py-5 text-pink-600">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
@@ -42,7 +42,7 @@ const SectionSeven = () => {
             width={120}
             height={120}
             alt="person"
-            className="absolute left-10 top-0 -translate-y-1/2 rounded-full border border-4 border-pink-500 bg-white"
+            className="absolute left-10 top-0 -translate-y-1/2 rounded-full border-4 border-pink-500 bg-white"
           />
           <p className="w-[500px] py-5 text-pink-600">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe

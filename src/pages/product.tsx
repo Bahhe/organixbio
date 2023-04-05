@@ -2,10 +2,12 @@ import Image from "next/image";
 import Countdown from "react-countdown";
 import { BsHeart, BsPencilFill, BsStarFill } from "react-icons/bs";
 import { BiRuler } from "react-icons/bi";
+import Header from "~/components/Header";
 
-const SectionSix = () => {
+const Product = () => {
   return (
     <section className="flex flex-col items-center py-10">
+      <Header />
       <div className="flex flex-col items-center gap-5">
         <p className="text-2xl uppercase tracking-[.5rem] text-pink-400">
           featured
@@ -188,4 +190,4 @@ const SectionSix = () => {
   );
 };
 
-export default SectionSix;
+export default Product;
