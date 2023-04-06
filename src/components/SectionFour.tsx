@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { BsCart, BsHeartFill, BsStarFill } from "react-icons/bs";
-import { AiOutlineEye } from "react-icons/ai";
+import { BsCart, BsStarFill } from "react-icons/bs";
+import { AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 
 const Product = () => {
   return (
@@ -38,7 +38,7 @@ const Product = () => {
           <AiOutlineEye />
         </div>
         <div className="flex h-10 w-10 cursor-pointer flex-col items-center justify-center rounded-full bg-white drop-shadow duration-1000 hover:bg-violet-500 hover:text-white">
-          <BsHeartFill />
+          <AiOutlineHeart />
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ const Product = () => {
 
 const SectionFour = () => {
   return (
-    <section className="mb-20 mt-20 flex w-full flex-col items-center gap-10 py-20">
+    <section className="mb-20 mt-20 flex w-full flex-col items-center gap-20 py-20">
       <div className="flex flex-col items-center">
         <span className="text-sm font-[500] uppercase tracking-[0.3rem] text-violet-400">
           the latest
@@ -57,7 +57,8 @@ const SectionFour = () => {
         </h1>
         <div className="h-1 w-24 bg-violet-500"></div>
       </div>
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-20">
+        <Product />
         <Product />
         <Product />
       </div>

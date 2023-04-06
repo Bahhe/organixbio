@@ -7,11 +7,11 @@ const SectionSix = () => {
   return (
     <section className="flex flex-col items-center py-10">
       <div className="flex flex-col items-center gap-5">
-        <p className="text-2xl uppercase tracking-[.5rem] text-pink-400">
+        <p className="text-2xl uppercase tracking-[.5rem] text-violet-400">
           featured
         </p>
         <h1 className="text-5xl font-bold capitalize">trending now</h1>
-        <div className="h-1 w-20 bg-pink-500"></div>
+        <div className="h-1 w-20 bg-violet-500"></div>
       </div>
       <div className="flex gap-10 py-10">
         <div className="w-1/2">
@@ -61,10 +61,10 @@ const SectionSix = () => {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <p className="text-pink-400 line-through">$50.00</p>
+            <p className="text-violet-400 line-through">$50.00</p>
             <p className="text-2xl">$55.00</p>
           </div>
-          <div className="text-sm text-pink-400">
+          <div className="text-sm text-violet-400">
             <div className="flex items-center gap-3">
               <p className="font-bold">vendor:</p> <p>fabulous-ishi</p>
             </div>
@@ -75,7 +75,7 @@ const SectionSix = () => {
               <p className="font-bold">sku:</p> <p>fabulous-ishi</p>
             </div>
           </div>
-          <div className="flex items-center gap-10 text-pink-600">
+          <div className="flex items-center gap-10 text-violet-600">
             <div className="flex items-center gap-3 capitalize">
               <BsHeart />
               <p>add to wishlist</p>
@@ -88,18 +88,18 @@ const SectionSix = () => {
           <div>
             <Countdown
               date={Date.now() + 100000000}
-              className="text-4xl font-bold text-pink-800"
+              className="text-4xl font-bold text-violet-800"
             />
           </div>
           <div>
             <p className="font-bold tracking-wide">
               hurry! only 8 units left in stock
             </p>
-            <div className="h-3 w-72 rounded-full bg-pink-100">
-              <div className="h-3 w-32 rounded-full bg-pink-800"></div>
+            <div className="h-3 w-72 rounded-full bg-violet-100">
+              <div className="h-3 w-32 rounded-full bg-violet-800"></div>
             </div>
             <div className="pt-5">
-              <p className="text-lg font-bold text-pink-400">size</p>
+              <p className="text-lg font-bold text-violet-400">size</p>
               <div className="flex items-center gap-3 uppercase">
                 <div className="flex h-10 w-10 items-center justify-center border bg-black text-white">
                   s
@@ -113,7 +113,7 @@ const SectionSix = () => {
               </div>
             </div>
             <div className="pt-5">
-              <p className="text-lg font-bold text-pink-400">color</p>
+              <p className="text-lg font-bold text-violet-400">color</p>
               <div className="flex items-center gap-3 uppercase">
                 <div className="flex h-10 w-10 border bg-black"></div>
                 <div className="flex h-10 w-10 border bg-yellow-500"></div>
@@ -121,7 +121,7 @@ const SectionSix = () => {
               </div>
             </div>
             <div className="pt-5">
-              <p className="pb-2 text-lg font-bold text-pink-400">quantity</p>
+              <p className="pb-2 text-lg font-bold text-violet-400">quantity</p>
               <div className="flex items-center uppercase">
                 <div className="flex h-10 w-10 items-center justify-center border">
                   -
@@ -134,7 +134,7 @@ const SectionSix = () => {
                 </div>
               </div>
               <div className="flex gap-5 py-5">
-                <button className="rounded-full bg-pink-500 px-10 py-2 uppercase text-white">
+                <button className="rounded-full bg-violet-500 px-10 py-2 uppercase text-white">
                   add to cart
                 </button>
                 <button className="rounded-full bg-black px-10 py-2 uppercase text-white">
@@ -147,16 +147,16 @@ const SectionSix = () => {
       </div>
       <div className="w-full">
         <div className="relative mx-auto w-[1116px] border p-10 pt-20">
-          <div className="absolute left-1/2 top-0 cursor-pointer bg-pink-100 px-5 py-2 uppercase duration-500 hover:bg-black hover:text-white">
+          <div className="absolute left-1/2 top-0 cursor-pointer bg-violet-100 px-5 py-2 uppercase duration-500 hover:bg-black hover:text-white">
             description
           </div>
-          <p className="pb-10 text-pink-600">
+          <p className="pb-10 text-violet-600">
             Faded short sleeves t-shirt with high neckline. Soft and stretchy
             material for a comfortable fit. Accessorize with a straw hat and you
             are ready for summer!
           </p>
           <h1 className="pb-2 font-bold capitalize">Sample Unordered List</h1>
-          <ul className="list-disc pl-8 text-pink-800">
+          <ul className="list-disc pl-8 text-violet-800">
             <li>Comodous in tempor ullamcorper miaculis</li>
             <li>Lorem ipsum dolor sit amet.</li>
             <li>Lorem ipsum dolor sit amet consectetur.</li>
@@ -165,7 +165,7 @@ const SectionSix = () => {
           <h1 className="pb-2 pt-2 font-bold capitalize">
             Sample ordered List
           </h1>
-          <ol className="list-decimal pl-8 text-pink-800">
+          <ol className="list-decimal pl-8 text-violet-800">
             <li>Comodous in tempor ullamcorper miaculis</li>
             <li>Lorem ipsum dolor sit amet.</li>
             <li>Lorem ipsum dolor sit amet consectetur.</li>
@@ -174,7 +174,7 @@ const SectionSix = () => {
           <h1 className="pb-2 pt-2 font-bold capitalize">
             Sample Paragraph Text
           </h1>
-          <p className="border-l pl-10 text-pink-800">
+          <p className="border-l pl-10 text-violet-800">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
             voluptatum fuga optio, officia repudiandae excepturi explicabo! Vel
             cum obcaecati ad nulla eum asperiores tempora in odio quos sapiente
