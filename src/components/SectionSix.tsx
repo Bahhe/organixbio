@@ -4,6 +4,8 @@ import { BsHeart, BsPencilFill, BsStarFill } from "react-icons/bs";
 import { BiRuler } from "react-icons/bi";
 import { useState } from "react";
 
+const pics = ["one", "two", "three", "four", "five", "six"];
+
 const SectionSix = () => {
   const [url, setUrl] = useState("/product.webp");
 
@@ -24,53 +26,21 @@ const SectionSix = () => {
               alt="product"
               width={700}
               height={700}
-              className="border"
+              className="border cursor-pointer"
             />
             <div className="flex items-center justify-between gap-1 overflow-x-auto pt-2">
-              <Image
-                onMouseEnter={() => setUrl("/product.jpeg")}
-                onMouseLeave={() => setUrl("/product.webp")}
-                src={"/one.jpeg"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-              <Image
-                src={"/two.jpeg"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-              <Image
-                src={"/three.jpeg"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-              <Image
-                src={"/four.jpeg"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-              <Image
-                src={"/five.jpeg"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-              <Image
-                src={"/six.jpeg"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
+              {pics.map((p, i) => (
+                <Image
+                  key={i}
+                  onMouseEnter={() => setUrl(`/${p}.jpeg`)}
+                  onMouseLeave={() => setUrl("/product.webp")}
+                  src={`/${p}.jpeg`}
+                  alt="product"
+                  width={150}
+                  height={150}
+                  className="border cursor-pointer"
+                />
+              ))}
             </div>
           </div>
           <div className="mx-auto flex flex-col gap-4 lg:w-1/2">
