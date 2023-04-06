@@ -30,21 +30,42 @@ const SectionSix = () => {
               <Image
                 onMouseEnter={() => setUrl("/product.jpeg")}
                 onMouseLeave={() => setUrl("/product.webp")}
-                src={"/product.jpeg"}
+                src={"/one.jpeg"}
                 alt="product"
                 width={150}
                 height={150}
                 className="border"
               />
               <Image
-                src={"/product.webp"}
+                src={"/two.jpeg"}
                 alt="product"
                 width={150}
                 height={150}
                 className="border"
               />
               <Image
-                src={"/product.webp"}
+                src={"/three.jpeg"}
+                alt="product"
+                width={150}
+                height={150}
+                className="border"
+              />
+              <Image
+                src={"/four.jpeg"}
+                alt="product"
+                width={150}
+                height={150}
+                className="border"
+              />
+              <Image
+                src={"/five.jpeg"}
+                alt="product"
+                width={150}
+                height={150}
+                className="border"
+              />
+              <Image
+                src={"/six.jpeg"}
                 alt="product"
                 width={150}
                 height={150}
