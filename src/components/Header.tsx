@@ -32,7 +32,9 @@ const SubHeader = () => {
     <div className="absolute top-20 z-10 flex h-10 w-screen items-center justify-center py-2 backdrop-blur-lg">
       <nav>
         <ul className="flex items-center gap-8 text-gray-700">
-          <li className="cursor-pointer">Products</li>
+          <Link href="/products" className="cursor-pointer">
+            Products
+          </Link>
           <li className="cursor-pointer">Facebook</li>
           <li className="cursor-pointer">TikTok</li>
           <li className="cursor-pointer">About us</li>
@@ -56,10 +58,10 @@ const Header = () => {
                 className="cursor-pointer text-lg"
               />
             </li>
-            <li className="border-r pr-5 text-lg lg:block hidden">
+            <li className="hidden border-r pr-5 text-lg lg:block">
               <Link href="#">Contact</Link>{" "}
             </li>
-            <li className="lg:flex cursor-pointer items-center pr-5 text-lg hidden">
+            <li className="hidden cursor-pointer items-center pr-5 text-lg lg:flex">
               English
               <MdKeyboardArrowDown className="text-lg" />
             </li>
