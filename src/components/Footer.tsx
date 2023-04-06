@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="flex items-center justify-center gap-32 p-10">
+      <footer className="flex flex-col sm:flex-row sm:items-center justify-center gap-5 lg:gap-32 p-10">
         <div className="flex flex-col">
           <div>
             <h1 className="pb-2 text-lg font-bold capitalize">location</h1>

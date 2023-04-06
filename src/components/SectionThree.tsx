@@ -12,7 +12,7 @@ const SectionThree = () => {
         <h1 className="mb-10 text-5xl font-bold">Our Services</h1>
         <div className="h-1 w-24 bg-violet-500"></div>
       </div>
-      <div className="flex items-center justify-center gap-40">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-40">
         <div className="flex flex-col items-center gap-5">
           <BsBoxSeam className="text-5xl text-violet-500" />
           <h1 className="text-2xl capitalize">free delevery</h1>

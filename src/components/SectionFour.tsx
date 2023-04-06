@@ -4,7 +4,7 @@ import { AiOutlineEye, AiOutlineHeart } from "react-icons/ai";
 
 const Product = () => {
   return (
-    <div className="group relative h-[450px] w-[400px] cursor-pointer overflow-hidden bg-gray-100">
+    <div className="group relative h-[450px] w-[300px] lg:w-[400px] cursor-pointer overflow-hidden bg-gray-100">
       <Image
         src={"/product.webp"}
         width={400}
@@ -52,12 +52,12 @@ const SectionFour = () => {
         <span className="text-sm font-[500] uppercase tracking-[0.3rem] text-violet-400">
           the latest
         </span>
-        <h1 className="mb-10 text-5xl font-bold capitalize">
+        <h1 className="mb-10 text-center text-5xl font-bold capitalize lg:text-start">
           organix products
         </h1>
         <div className="h-1 w-24 bg-violet-500"></div>
       </div>
-      <div className="flex items-center gap-20">
+      <div className="flex flex-col items-center gap-20 lg:flex-row">
         <Product />
         <Product />
         <Product />

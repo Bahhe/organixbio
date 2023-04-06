@@ -8,25 +8,25 @@ import Image from "next/image";
 const Product = () => {
   return (
     <div className="flex h-screen items-end">
-      <div className="showcase flex h-[calc(100vh-110px)] w-screen items-center">
-        <div className="flex flex-1 items-center justify-center">
-          <div className="">
-            <span className="text-4xl text-violet-300">Cosmetics</span>
-            <h1 className="pb-5 text-7xl drop-shadow font-[800]">
+      <div className="showcase flex flex-col-reverse lg:flex-row h-[calc(100vh-120px)] w-screen items-center">
+        <div className="flex flex-1 items-center justify-center z-10 backdrop-blur-sm">
+          <div className="flex flex-col items-center lg:items-start">
+            <span className="lg:text-4xl text-violet-300">Cosmetics</span>
+            <h1 className="lg:pb-5 lg:text-7xl text-4xl drop-shadow font-[800]">
               Super Natural
             </h1>
-            <p className="w-[600px] leading-6 tracking-widest text-violet-500 py-5">
+            <p className="max-w-[600px] lg:leading-6 lg:tracking-widest text-violet-500 lg:py-5 py-2 text-center lg:text-start">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus dolore, dolor soluta eius praesentium alias. Accusamus
               alias natus vero quasi?
             </p>
-            <button className="mt-5 rounded-full bg-violet-500 px-6 py-3 uppercase text-white shadow-xl">
+            <button className="mt-5 w-fit rounded-full bg-violet-500 px-6 py-3 uppercase text-white shadow-xl mb-2">
               shop now
             </button>
           </div>
         </div>
         <div className="flex flex-1 items-center justify-center">
-          <Image src={"/product.webp"} alt="product" width={500} height={500} />
+          <Image src={"/product.webp"} alt="product" width={500} height={500} className="absolute top-1/2 -translate-y-1/2" />
         </div>
       </div>
     </div>
