@@ -2,17 +2,8 @@ import Image from "next/image";
 import Countdown from "react-countdown";
 import { BsHeart, BsPencilFill, BsStarFill } from "react-icons/bs";
 import { BiRuler } from "react-icons/bi";
-import { FreeMode, Navigation, Thumbs } from "swiper";
-import { SwiperSlide, Swiper } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import { useState } from "react";
 
 const SectionSix = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
   return (
     <section className="flex flex-col items-center py-10">
       <div className="flex flex-col items-center gap-5">
@@ -23,81 +14,8 @@ const SectionSix = () => {
         <div className="h-1 w-20 bg-violet-500"></div>
       </div>
       <div className="flex gap-10 py-10">
-        <div className="flex w-[600px] items-center justify-center">
-          <Swiper
-            spaceBetween={10}
-            navigation={true}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper2"
-          >
-            <SwiperSlide>
-              <Image
-                src={"/product.webp"}
-                alt="product"
-                width={500}
-                height={500}
-                className="w-full border"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={"/product.webp"}
-                alt="product"
-                width={500}
-                height={500}
-                className="w-full border"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={"/product.webp"}
-                alt="product"
-                width={500}
-                height={500}
-                className="w-full border"
-              />
-            </SwiperSlide>
-          </Swiper>
-          <Swiper
-            onSwiper={() => setThumbsSwiper}
-            spaceBetween={10}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <Image
-                src={"/product.webp"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={"/product.webp"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={"/product.webp"}
-                alt="product"
-                width={150}
-                height={150}
-                className="border"
-              />
-            </SwiperSlide>
-          </Swiper>
-
-          {/* <Image
+        <div className="w-1/2">
+          <Image
             src={"/product.webp"}
             alt="product"
             width={700}
@@ -126,7 +44,7 @@ const SectionSix = () => {
               height={150}
               className="border"
             />
-          </div> */}
+          </div>
         </div>
         <div className="flex w-1/2 flex-col gap-4">
           <h1 className="text-2xl capitalize">base foundation</h1>
