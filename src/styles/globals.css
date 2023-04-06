@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.showcase {
+  background: linear-gradient(165deg, #e7defd, #ffffff);
+}
