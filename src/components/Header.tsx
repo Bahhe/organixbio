@@ -1,7 +1,8 @@
+import { SignIn, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { type Dispatch, type SetStateAction, useState } from "react";
-import { CiShoppingCart, CiUser } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { TfiViewList } from "react-icons/tfi";
@@ -46,6 +47,7 @@ const SubHeader = () => {
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const user = useUser();
 
   return (
     <>
@@ -77,8 +79,10 @@ const Header = () => {
           />
         </Link>
         <div className="flex flex-1 items-center justify-center gap-5">
-          <div>
-            <CiUser className="cursor-pointer text-3xl hover:text-violet-500" />
+          <div className="">
+            {!user.isSignedIn && <SignInButton />}
+            {user.isSignedIn && <UserButton />}
+            <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
           </div>
           <div>
             <CiShoppingCart className="cursor-pointer text-3xl hover:text-violet-500" />

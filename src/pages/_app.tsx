@@ -1,5 +1,6 @@
 import { type AppType } from "next/app";
 import { Poppins } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 
 import { api } from "~/utils/api";
 
@@ -14,7 +15,9 @@ const poppins = Poppins({
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <main className={`${poppins.variable} overflow-hidden font-sans`}>
-      <Component {...pageProps} />
+      <ClerkProvider {...pageProps}>
+        <Component {...pageProps} />
+      </ClerkProvider>
     </main>
   );
 };
