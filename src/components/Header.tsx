@@ -71,12 +71,12 @@ const Header = () => {
         </nav>
         <Link href="/" className="flex flex-1 justify-center">
           <Image
-            src={"/logo.png"}
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/blackbeard-b03b7.appspot.com/o/logo.png?alt=media&token=fc9de11c-8e68-4e45-be33-b453655be676"
+            }
             alt="logo"
             width={200}
             height={200}
-            placeholder="blur"
-            blurDataURL="/logo.png"
           />
         </Link>
         <div className="flex flex-1 items-center justify-center gap-5">
