@@ -4,37 +4,49 @@ const Images = () => {
   return (
     <section className="w-full pt-28">
       <Image
-        src={"/product/one.webp"}
+        src={"/one.webp"}
+        placeholder="blur"
+        blurDataURL="/one.webp"
         width={1920}
         height={1280}
         alt="product image"
       />
       <Image
-        src={"/product/two.webp"}
+        src={"/two.webp"}
+        placeholder="blur"
+        blurDataURL="/one.webp"
         width={1920}
         height={1280}
         alt="product image"
       />
       <Image
-        src={"/product/three.webp"}
+        placeholder="blur"
+        blurDataURL="/one.webp"
+        src={"/three.webp"}
         width={1920}
         height={1280}
         alt="product image"
       />
       <Image
-        src={"/product/four.webp"}
+        placeholder="blur"
+        blurDataURL="/one.webp"
+        src={"/four.webp"}
         width={1920}
         height={1280}
         alt="product image"
       />
       <Image
-        src={"/product/five.webp"}
+        placeholder="blur"
+        blurDataURL="/one.webp"
+        src={"/five.webp"}
         width={1920}
         height={1280}
         alt="product image"
       />
       <Image
-        src={"/product/six.webp"}
+        src={"/six.webp"}
+        placeholder="blur"
+        blurDataURL="/one.webp"
         width={1920}
         height={1280}
         alt="product image"

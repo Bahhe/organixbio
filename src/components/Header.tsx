@@ -75,7 +75,8 @@ const Header = () => {
             alt="logo"
             width={200}
             height={200}
-            className=""
+            placeholder="blur"
+            blurDataURL="/logo.png"
           />
         </Link>
         <div className="flex flex-1 items-center justify-center gap-5">
