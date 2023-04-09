@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Header from "~/components/Header";
+// import Header from "~/components/Header";
 // import Hero from "~/components/Hero";
 // import SectionFour from "~/components/SectionFour";
 // import SectionThree from "~/components/SectionThree";
@@ -8,7 +8,7 @@ import Header from "~/components/Header";
 // import SectionFive from "~/components/SectionFive";
 // import SectionSix from "~/components/SectionSix";
 // import SectionSeven from "~/components/SectionSeven";
-import Footer from "~/components/Footer";
+// import Footer from "~/components/Footer";
 import Images from "~/components/Images";
 
 const Home: NextPage = () => {
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <Header />
+        {/* <Header /> */}
         <Images />
         {/* <Hero /> */}
         {/* <SectionTwo /> */}
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         {/* <SectionFive /> */}
         {/* <SectionSix /> */}
         {/* <SectionSeven /> */}
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
