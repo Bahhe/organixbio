@@ -1,6 +1,12 @@
 import Image from "next/image";
-import { type ChangeEvent, type FormEvent, useState, useEffect } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { cities } from "~/utils/states";
+
+type ApiResponse = {
+  data: {
+    tableRange: string;
+  };
+};
 
 const Button = () => {
   const [show, setShow] = useState(true);
@@ -49,67 +55,99 @@ const Button = () => {
   );
 };
 
-const MyForm = () => {
-  const [state, setState] = useState({ name: "", number: null, city: "" });
+const Form = () => {
+  const [name, setName] = useState("");
+  const [city, setCity] = useState("");
+  const [phone, setPhone] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    const number = state.number;
+    const form = {
+      name,
+      city: city ? city : "Adrar",
+      phone,
+    };
 
-    if (!Number(number)) {
-      alert("Your phone number must be a number");
-      return;
-    }
+    const rawResponse = await fetch("/api/submit", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+    // eslint-disable-next-line
+    const content: ApiResponse = await rawResponse.json();
 
-    console.log("submitting", state);
-  };
+    // print to screen
+    alert(content.data.tableRange);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setState({ ...state, [name]: value });
+    // Reset the form fields
+    setPhone("");
+    setName("");
+    setCity("");
   };
 
   return (
     <form
+      className="my-10 flex flex-col gap-10 rounded-lg border p-10 shadow-lg"
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 rounded-lg border p-10 shadow-sm"
     >
-      <div>
-        <p className="pb-1 font-bold capitalize">name:</p>
+      <div className="">
+        <label htmlFor="name" className="font-semibold">
+          Name:
+        </label>
         <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           type="text"
-          name="username"
-          onChange={handleChange}
-          placeholder="name.."
-          className="rounded-lg border p-4 shadow-sm"
+          name="name"
+          id="name"
+          className="sm:text-md block w-64 rounded-md border border-gray-300 p-5 shadow-md focus:border-indigo-500 focus:ring-indigo-500"
+          placeholder="Your Name"
         />
       </div>
-      <p className="pb-1 font-bold capitalize">city:</p>
-      <select className="w-full rounded-lg border bg-white p-4 shadow-sm">
-        {cities.map((w, i) => (
-          <option value={w} key={i}>
-            {i + 1} {w}
-          </option>
-        ))}
-      </select>
-      <div>
-        <p className="pb-1 font-bold capitalize">phone number:</p>
+      <div className="">
+        <label htmlFor="city" className="font-semibold">
+          City
+        </label>
+        <select
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          name="city"
+          id="city"
+          className="sm:text-md block w-64 rounded-md border border-gray-300 bg-transparent p-5 shadow-md focus:border-indigo-500 focus:ring-indigo-500"
+        >
+          {cities.map((c, i) => (
+            <option key={i} value={c}>
+              {i + 1}- {c}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="">
+        <label htmlFor="phone" className="font-semibold">
+          Phone
+        </label>
         <input
-          type="number"
-          name="number"
-          onChange={handleChange}
-          placeholder="number..."
-          className="rounded-lg border p-4 shadow-sm"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          type="tel"
+          name="phone"
+          id="phone"
+          className="sm:text-md block w-64 rounded-md border border-gray-300 p-5 shadow-md focus:border-indigo-500 focus:ring-indigo-500"
+          placeholder="Your Phone"
         />
       </div>
-      <button
-        type="submit"
-        className="rounded-lg border bg-green-500 p-4 capitalize text-white shadow-sm "
-      >
-        order now
-      </button>
+      <div className="flex items-center justify-center">
+        <button
+          type="submit"
+          className="flex w-64 items-center justify-center rounded-md bg-green-600 px-2 py-3 text-sm text-xl text-white shadow"
+        >
+          Order
+        </button>
+      </div>
     </form>
   );
 };
@@ -183,7 +221,7 @@ const Images = () => {
         </video>
       </div>
       <div className="flex items-center justify-center">
-        <MyForm />
+        <Form />
       </div>
       <Button />
     </section>
