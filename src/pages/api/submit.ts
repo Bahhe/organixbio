@@ -5,6 +5,8 @@ type SheetForm = {
   name: string;
   city: string;
   phone: string;
+  quantity: number;
+  date: string;
 };
 
 export default async function handler(
@@ -40,7 +42,7 @@ export default async function handler(
       range: "A1:D1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[body.name, body.city, body.phone]],
+        values: [[body.name, body.city, body.phone, body.quantity, body.date]],
       },
     });
 
