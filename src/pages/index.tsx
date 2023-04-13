@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect, type FormEvent } from "react";
 import { cities } from "~/utils/states";
+import { BiLoaderAlt } from "react-icons/bi";
 
 const Button = () => {
   const [show, setShow] = useState(true);
@@ -58,10 +59,13 @@ const Form = () => {
   const [city, setCity] = useState("");
   const [phone, setPhone] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+
   const router = useRouter();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true); // Set the loading state to true
 
     const time = moment().format("MMMM Do YYYY, h:mm:ss a");
 
@@ -74,6 +78,8 @@ const Form = () => {
     };
 
     if (phone === "") {
+      setIsLoading(false); // Set the loading state to true
+
       return alert("يرجا أدخال رقم الهاتف");
     }
 
@@ -93,6 +99,7 @@ const Form = () => {
     await router.push("/congrats");
 
     // Reset the form fields
+    setIsLoading(false); // Set the loading state to true
     setPhone("");
     setName("");
     setCity("");
@@ -174,9 +181,13 @@ const Form = () => {
       <div className="flex items-center justify-center">
         <button
           type="submit"
-          className="flex w-64 animate-bounce items-center justify-center rounded-md bg-green-600 px-2 py-3 text-sm text-xl text-white shadow"
+          className="flex h-16 w-64 animate-bounce items-center justify-center rounded-md bg-green-600 text-sm text-xl text-white shadow"
         >
-          اشتري الأن
+          {isLoading ? (
+            <BiLoaderAlt className="absolute animate-spin text-4xl" />
+          ) : (
+            "اشتري الأن"
+          )}
         </button>
       </div>
     </form>
