@@ -5,6 +5,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,6 +15,22 @@ const poppins = Poppins({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init("771903037595646"); // facebookPixelId
+        ReactPixel.pageView();
+
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, [router.events]);
+
   return (
     <main className={`${poppins.variable} overflow-hidden font-sans`}>
       <ClerkProvider {...pageProps}>
