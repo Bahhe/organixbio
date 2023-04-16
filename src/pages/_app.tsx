@@ -5,10 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
-// import { useRouter } from "next/router";
-// import { useEffect } from "react";
 import Script from "next/script";
-// import { fbq } from "react-facebook-pixel";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,21 +14,7 @@ const poppins = Poppins({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   // eslint-disable-next-line
-  //   import("react-facebook-pixel")
-  //     .then((x) => x.default)
-  //     .then((ReactPixel) => {
-  //       ReactPixel.init("771903037595646"); // facebookPixelId
-  //       ReactPixel.pageView();
-  //
-  //       router.events.on("routeChangeComplete", () => {
-  //         ReactPixel.pageView();
-  //       });
-  //     });
-  // }, [router.events]);
+  const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID as string;
 
   return (
     <main className={`${poppins.variable} overflow-hidden font-sans`}>
@@ -49,7 +32,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '771903037595646');
+            fbq('init', ${FB_PIXEL_ID});
             fbq('track', 'PageView');
           `,
           }}
