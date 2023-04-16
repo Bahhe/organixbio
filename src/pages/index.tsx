@@ -27,7 +27,10 @@ const Button = ({ sectionRef }: { sectionRef: MutableRefObject<null> }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setInView(entry.isIntersecting);
+        //eslint-disable-next-line
+        if (entry !== undefined) {
+          setInView(entry.isIntersecting);
+        }
       },
       { threshold: 0.5 }
     );
@@ -38,6 +41,7 @@ const Button = ({ sectionRef }: { sectionRef: MutableRefObject<null> }) => {
 
     return () => {
       if (sectionRef.current) {
+        //eslint-disable-next-line
         observer.unobserve(sectionRef.current);
       }
     };
