@@ -19,7 +19,9 @@ const Button = ({ sectionRef }: { sectionRef: MutableRefObject<null> }) => {
   const scrollToSection = () => {
     if (sectionRef.current) {
       // eslint-disable-next-line
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      (sectionRef.current as HTMLFormElement).scrollIntoView({
+        behavior: "smooth",
+      });
       setInView(true);
     }
   };
