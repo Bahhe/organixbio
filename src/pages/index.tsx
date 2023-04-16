@@ -3,50 +3,51 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState, useEffect, type FormEvent } from "react";
+import {
+  useState,
+  type FormEvent,
+  useRef,
+  type MutableRefObject,
+  useEffect,
+} from "react";
 import { cities } from "~/utils/states";
 import { BiLoaderAlt } from "react-icons/bi";
 
-const Button = () => {
-  const [show, setShow] = useState(true);
-  const [isBottom, setIsBottom] = useState(false);
+const Button = ({ sectionRef }: { sectionRef: MutableRefObject<null> }) => {
+  const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleScroll = () => {
-    const windowHeight = window.innerHeight;
-    const fullHeight = document.body.offsetHeight;
-    const scrollPosition = window.scrollY + windowHeight;
-    if (scrollPosition >= fullHeight) {
-      setIsBottom(true);
-    } else {
-      setIsBottom(false);
+  const scrollToSection = () => {
+    if (sectionRef.current) {
+      // eslint-disable-next-line
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      setInView(true);
     }
   };
 
   useEffect(() => {
-    if (isBottom) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-  }, [isBottom]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
 
-  const goToBottom = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth",
-    });
-  };
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
 
   return (
     <button
-      onClick={goToBottom}
+      onClick={scrollToSection}
       className={`fixed bottom-2 left-1/2 w-5/6 -translate-x-1/2 rounded-lg border bg-green-500 p-4 capitalize text-white shadow-sm duration-75 hover:scale-105 ${
-        !show ? "hidden" : "block"
+        inView ? "hidden" : "block"
       }`}
     >
       أشتري الأن
@@ -54,7 +55,7 @@ const Button = () => {
   );
 };
 
-const Form = () => {
+const Form = ({ sectionRef }: { sectionRef: MutableRefObject<null> }) => {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [phone, setPhone] = useState("");
@@ -108,6 +109,7 @@ const Form = () => {
 
   return (
     <form
+      ref={sectionRef}
       className="my-10 flex flex-col gap-10 rounded-lg border p-10 shadow-lg"
       onSubmit={handleSubmit}
     >
@@ -195,6 +197,7 @@ const Form = () => {
 };
 
 const Home: NextPage = () => {
+  const sectionRef: MutableRefObject<null> = useRef(null);
   return (
     <>
       <Head>
@@ -207,74 +210,74 @@ const Home: NextPage = () => {
           <div className="flex flex-col">
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/01.jpg?alt=media&token=396cde7d-2b9b-43bf-a9ec-51e3e0f6f9df"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/0001.jpg?alt=media&token=81694143-63eb-4698-b9ec-f8ed8882827c"
+              }
+              width={1920}
+              height={1280}
+              alt="product image"
+            />
+            <Image
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/002.jpg?alt=media&token=d809c95b-70f0-4363-98a6-bbd1b24f0dc4"
+              }
+              width={1920}
+              height={1280}
+              alt="product image"
+            />
+            <Image
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/003.jpg?alt=media&token=521304d1-bd92-44a0-b7ad-b5d1996bf697"
+              }
+              width={1920}
+              height={1280}
+              alt="product image"
+            />
+            <Image
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/004.jpg?alt=media&token=d50c71de-2ef3-4050-be8b-ff8ff4e5bb4d"
+              }
+              width={1920}
+              height={1280}
+              alt="product image"
+            />
+            <Image
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/005.jpg?alt=media&token=2613dcea-edc0-4bf7-8707-c0d2e2cd4519"
+              }
+              width={1920}
+              height={1280}
+              alt="product image"
+            />
+            <Image
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/006.jpg?alt=media&token=ad419393-51b8-4cc8-8e25-ba1622981c9f"
+              }
+              width={1920}
+              height={1280}
+              alt="product image"
+            />
+            <Image
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/007.jpg?alt=media&token=bf7387aa-6c7b-4f60-bdcd-78fe75b92405"
+              }
+              width={1920}
+              height={1280}
+              alt="product image"
+            />
+            <Image
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/008.jpg?alt=media&token=94b7bd6a-95eb-4bd5-8f00-6089d6841a6d"
               }
               width={1920}
               height={1280}
               alt="product image"
             />
             <div className="flex items-center justify-center">
-              <Form />
+              <Form sectionRef={sectionRef} />
             </div>
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/02.jpg?alt=media&token=6b144903-4f03-40dd-9975-8ce8259d2fb7"
-              }
-              width={1920}
-              height={1280}
-              alt="product image"
-            />
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/04.jpg?alt=media&token=bed91c1d-d5cb-4194-8231-e36e7b008207"
-              }
-              width={1920}
-              height={1280}
-              alt="product image"
-            />
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/05.jpg?alt=media&token=d7a1c9bc-5ceb-46f9-a5a7-44a818dc4154"
-              }
-              width={1920}
-              height={1280}
-              alt="product image"
-            />
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/06.jpg?alt=media&token=94db86b4-a2c6-4719-8cca-18734623ae46"
-              }
-              width={1920}
-              height={1280}
-              alt="product image"
-            />
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/07.jpg?alt=media&token=d882403b-4768-4e58-bbe6-45ccc83d8580"
-              }
-              width={1920}
-              height={1280}
-              alt="product image"
-            />
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/08.jpg?alt=media&token=98348b7f-2c18-4c6f-8e53-74ce256ced80"
-              }
-              width={1920}
-              height={1280}
-              alt="product image"
-            />
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/09.jpg?alt=media&token=d5e36e59-aa05-4f01-b8f8-01293dd304fa"
-              }
-              width={1920}
-              height={1280}
-              alt="product image"
-            />
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/10.jpg?alt=media&token=bb42d6c3-4572-4aec-acaa-d08be0aa09ee"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/009.jpg?alt=media&token=007e545b-9ce0-4ef2-a981-6d6cceb6e12d"
               }
               width={1920}
               height={1280}
@@ -296,8 +299,7 @@ const Home: NextPage = () => {
           {/*     Your browser does not support the video tag. */}
           {/*   </video> */}
           {/* </div> */}
-          <Form />
-          <Button />
+          <Button sectionRef={sectionRef} />
         </section>
       </main>
     </>
