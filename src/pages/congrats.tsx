@@ -5,7 +5,7 @@ const Congrats = () => {
     <div className="flex h-screen w-screen flex-col items-center justify-center text-center text-2xl">
       <Image
         src={
-          "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/thank%20you%20page%20(2)%20(1).jpg?alt=media&token=f1b19eed-d022-4941-8f8b-7fce00c77b96"
+          "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/tank%20you%20page.jpg?alt=media&token=1536907d-2993-4927-b16b-69756e69babf"
         }
         width={883}
         height={1250}
