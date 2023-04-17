@@ -216,7 +216,7 @@ const Home: NextPage = () => {
           <div className="flex flex-col">
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/0001.jpg?alt=media&token=81694143-63eb-4698-b9ec-f8ed8882827c"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/01.jpg?alt=media&token=43a73d2a-27ed-4879-bc73-71cfe1f417da"
               }
               width={1920}
               height={1280}
@@ -224,7 +224,7 @@ const Home: NextPage = () => {
             />
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/002.jpg?alt=media&token=d809c95b-70f0-4363-98a6-bbd1b24f0dc4"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/02.jpg?alt=media&token=89b3fcf9-afba-45d2-9fad-0c16c8335708"
               }
               width={1920}
               height={1280}
@@ -232,7 +232,7 @@ const Home: NextPage = () => {
             />
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/003.jpg?alt=media&token=521304d1-bd92-44a0-b7ad-b5d1996bf697"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/03.jpg?alt=media&token=acd6d9fb-4780-478a-9c44-d57aeeb34cbe"
               }
               width={1920}
               height={1280}
@@ -240,7 +240,7 @@ const Home: NextPage = () => {
             />
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/004.jpg?alt=media&token=d50c71de-2ef3-4050-be8b-ff8ff4e5bb4d"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/04.jpg?alt=media&token=f105655d-6fc8-4963-af97-539a6c3623b2"
               }
               width={1920}
               height={1280}
@@ -248,7 +248,7 @@ const Home: NextPage = () => {
             />
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/005.jpg?alt=media&token=2613dcea-edc0-4bf7-8707-c0d2e2cd4519"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/05.jpg?alt=media&token=4b486a08-09eb-4ee0-9e53-b1973621ea29"
               }
               width={1920}
               height={1280}
@@ -256,7 +256,7 @@ const Home: NextPage = () => {
             />
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/006.jpg?alt=media&token=ad419393-51b8-4cc8-8e25-ba1622981c9f"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/06.jpg?alt=media&token=054bd0f8-2f15-4fc2-97e1-1f9e2383bf07"
               }
               width={1920}
               height={1280}
@@ -264,7 +264,7 @@ const Home: NextPage = () => {
             />
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/007.jpg?alt=media&token=bf7387aa-6c7b-4f60-bdcd-78fe75b92405"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/07.jpg?alt=media&token=6ff54f3c-958f-41f9-94ca-e3b1feaa1c2b"
               }
               width={1920}
               height={1280}
@@ -272,7 +272,7 @@ const Home: NextPage = () => {
             />
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/008.jpg?alt=media&token=94b7bd6a-95eb-4bd5-8f00-6089d6841a6d"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/08.jpg?alt=media&token=729e990b-b6b9-4ff4-86dd-661dcda44929"
               }
               width={1920}
               height={1280}
@@ -283,28 +283,13 @@ const Home: NextPage = () => {
             </div>
             <Image
               src={
-                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/009.jpg?alt=media&token=007e545b-9ce0-4ef2-a981-6d6cceb6e12d"
+                "https://firebasestorage.googleapis.com/v0/b/organixbio.appspot.com/o/09.jpg?alt=media&token=cfb552fa-0752-4db5-83d2-5f314f6788d6"
               }
               width={1920}
               height={1280}
               alt="product image"
             />
           </div>
-          {/* <div className="flex flex-col items-center"> */}
-          {/*   <audio controls> */}
-          {/*     <source */}
-          {/*       src="https://firebasestorage.googleapis.com/v0/b/webstore-d48be.appspot.com/o/Pink%20Floyd%20-%20Breathe%20(HQ%20Audio).mp3?alt=media&token=84dc684a-1682-4ed7-97f8-e9bfe684070a" */}
-          {/*       type="audio/ogg" */}
-          {/*     /> */}
-          {/*     Your browser does not support the audio element. */}
-          {/*   </audio> */}
-          {/* </div> */}
-          {/* <div className="flex flex-col items-center"> */}
-          {/*   <video width="320" height="240" controls> */}
-          {/*     <source src="" type="video/mp4" /> */}
-          {/*     Your browser does not support the video tag. */}
-          {/*   </video> */}
-          {/* </div> */}
           <Button sectionRef={sectionRef} />
         </section>
       </main>
